@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "certfhe-py"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iosfwd": "cpp"
+		}
+	}
+}
