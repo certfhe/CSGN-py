@@ -4,6 +4,14 @@ python bindings for certfhe library
 # Description
 certfhe-py is a python wrapper over the library certFHE, realized using pybind11, a library used to map c++ classes to python classes
 
+# Exports
+The following classes are exported to python:
+* Context
+* Permutation
+* Ciphertext
+* Plaintext
+* SecretKey
+
 # Documentation
 Full documentation about python bindings is available from the author, on [readthedocs](https://pybind11.readthedocs.io/en/latest/classes.html#overloaded-methods)
 
@@ -18,9 +26,15 @@ Both certfhe and pybind11 are included as git submodules inside **externals** di
 * certfhe library is also available on github
 
 # Building
+You should build out of the source tree. For that, in the root folder, you need to create a directory, called build; then, you should go to that directory and run cmake from there. Hopefully you will get no error messages and in the build directory you should find a file called **certfhepy.cpython-{something...}.so**
 
+$ git clone https://github.com/certfhe/certfhe-py.git certfhe-py
+$ git checkout master
+$ mkdir build
+$ cd build
+$ cmake ..
 
 # Testing
 
 
-
+# Running
