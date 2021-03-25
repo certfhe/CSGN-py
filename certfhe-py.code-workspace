@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "certfhe-py"
+		},
+		{
+			"path": "externals/certfhe"
 		}
 	],
 	"settings": {
