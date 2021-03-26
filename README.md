@@ -15,7 +15,7 @@ The following classes are exported to python:
 # Documentation
 Full documentation about python bindings is available from the author, on [readthedocs](https://pybind11.readthedocs.io/en/latest/classes.html#overloaded-methods)
 
-There are multiple methods on realizing the binding, the most important of them is nicely explained by [this guy](https://realpython.com/python-bindings-overview/#pybind11)
+There are multiple methods on realizing the binding. The most important of them are nicely explained by [this guy](https://realpython.com/python-bindings-overview/#pybind11)
 
 Besides pybind11, the tricks are done by CMake building system, pretty much available everywhere. The is no more magic in CMake once you master it, but for that you need to read [the documentation](https://cmake.org/cmake/help/v3.15/)
 

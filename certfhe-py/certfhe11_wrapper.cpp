@@ -1,5 +1,6 @@
 // pybind11_wrapper.cpp
 #include <pybind11/pybind11.h>
+#include <pybind11/operators.h>
 #include "certFHE.h"
 
 namespace py = pybind11;
@@ -26,8 +27,8 @@ PYBIND11_MODULE(certfhepy, m)
         .def(py::init<const uint64_t>())
         .def(py::init<const Permutation &>())
         .def("operator=", &Permutation::operator=)
-        .def("operator+", &Permutation::operator+)
-        .def("operator+=", &Permutation::operator+=)
+        .def(py::self + py::self)
+        .def(py::self += py::self)
         .def("getLength", &Permutation::getLength)
         .def("getPermutation", &Permutation::getPermutation)
         .def("getInverse", &Permutation::getInverse);
@@ -36,10 +37,10 @@ PYBIND11_MODULE(certfhepy, m)
         .def(py::init<>())
         .def(py::init<const uint64_t *, const uint64_t *, const uint64_t, const Context &>())
         .def(py::init<Ciphertext &>())
-        .def("operator+", &Ciphertext::operator+)
-        .def("operator+=", &Ciphertext::operator+=)
-        .def("operator*", &Ciphertext::operator*)
-        .def("operator*=", &Ciphertext::operator*=)
+        .def(py::self + py::self)
+        .def(py::self += py::self)
+        .def(py::self * py::self)
+        .def(py::self *= py::self)
         .def("setValues", &Ciphertext::setValues)
         .def("setBitlen", &Ciphertext::setBitlen)
         .def("setContext", &Ciphertext::setContext)

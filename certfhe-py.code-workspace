@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "externals/certfhe"
+		},
+		{
+			"path": "tests"
+		},
+		{
+			"path": "externals/pybind11"
 		}
 	],
 	"settings": {
